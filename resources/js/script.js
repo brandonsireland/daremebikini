@@ -1,31 +1,10 @@
-
-window.onload = function () {
-
-    var navBar = document.getElementById("#navBar");
-    var sticky = navBar.offsetTop;
-
-    function scrollNav() {
-        if (window.pageYOffset > sticky) {
-            navBar.classList.add("sticky");
-        } else {
-            navBar.classList.remove("sticky");
-        }
-    }
-
-    // Scrolling Navigation
-    window.onscroll = function () {
-        scrollNav()
-    };
-
+(function(){
+   
     //Swiper Carousel
     var mySwiper = new Swiper('.swiper-container', {
         spaceBetween: 30,
         effect: 'fade',
         loop: true,
-        // pagination: {
-        //     el: '.swiper-pagination',
-        //     clickable: true,
-        // },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -68,15 +47,11 @@ window.onload = function () {
         }
     });
 
-};
-//On Load ends
-
 //Fade in Header Text
 var el = document.querySelector('.js-fade');
 
 if (el.classList.contains('is-paused')) {
     el.classList.remove('is-paused');
-    console.log('is removed')
 }
 
 // Mobile Navigation Side Buttons
@@ -146,9 +121,8 @@ var waypointFour = new Waypoint({
 
 // Shop the look button loop
 for (i = 0; i < document.getElementsByClassName('insta-photo').length; i++) {
-
     var instaPhoto = document.getElementsByClassName('insta-photo')[i];
     instaPhoto.id = 'instaPhoto' + i;
-    // var instaButton = instaPhoto.lastElementChild.id = 'InstaButton' + i;
-    console.log(i)
 }
+
+})();

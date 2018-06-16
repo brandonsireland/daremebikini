@@ -1,0 +1,53 @@
+
+footer {
+    @extend %footer_extend_1;
+    ul.inline{
+        li {
+            @extend %footer_extend_1;
+            a {
+                @extend %footer_extend_1;
+                &:hover {
+                    text-decoration: none;
+                    color: $color_lochmara_approx;
+                }
+                &:active {
+                    text-decoration: none;
+                    color: $color_lochmara_approx;
+                }
+            }
+        }
+    }
+}
+.brandon {
+	color: $color_regal_blue_approx !important;
+	text-transform: none !important;
+}
+small a:hover {
+	text-decoration: none;
+	color: $color_lochmara_approx;
+}
+
+.fa-facebook-square {
+	&:active {
+		color: $color_azure_approx;
+	}
+	&:hover {
+		color: $color_azure_approx;
+	}
+}
+.fa-instagram {
+	&:active {
+		color: $color_golden_tainoi_approx;
+	}
+	&:hover {
+		color: $color_golden_tainoi_approx;
+	}
+}
+.fa-pinterest {
+	&:active {
+		color: $color_monza_approx;
+	}
+	&:hover {
+		color: $color_monza_approx;
+	}
+}
