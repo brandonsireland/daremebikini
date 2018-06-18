@@ -18,36 +18,27 @@ footer {
         }
     }
 }
-.brandon {
-	color: $color_regal_blue_approx !important;
-	text-transform: none !important;
-}
+
 small a:hover {
 	text-decoration: none;
 	color: $color_lochmara_approx;
 }
 
-.fa-facebook-square {
+.facebook {
+	fill:$color_fuscous_gray_approx;
 	&:active {
-		color: $color_azure_approx;
+		fill: $color_azure_approx;
 	}
 	&:hover {
-		color: $color_azure_approx;
+		fill: $color_azure_approx;
 	}
 }
-.fa-instagram {
+.instagram {
+	fill:$color_fuscous_gray_approx;
 	&:active {
-		color: $color_golden_tainoi_approx;
+		fill: $color_golden_tainoi_approx;
 	}
 	&:hover {
-		color: $color_golden_tainoi_approx;
-	}
-}
-.fa-pinterest {
-	&:active {
-		color: $color_monza_approx;
-	}
-	&:hover {
-		color: $color_monza_approx;
+		fill: $color_golden_tainoi_approx;
 	}
 }

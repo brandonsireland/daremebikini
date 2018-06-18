@@ -1,5 +1,8 @@
 
 body {
+	text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 	font-family: $secondary-font;
 }
 .clearfix {
@@ -12,17 +15,12 @@ body {
 		visibility: hidden;
 	}
 }
-.shop-section {
-	background: $white;
-}
-.above {
-	z-index: 1;
-}
-.bf {
-	position: relative;
-}
+
 h2 {
-	font-family: $secondary-font-light;
+	font-family: $primary-font;
+	color: $white;
+	font-size: 9vw;
+	text-transform: none;
 }
 h3 {
 	font-family: $secondary-font-light;
@@ -43,20 +41,78 @@ a {
 			.insta-button {
 				@extend %main_styles_extend_2;
 			}
-			.arrivals-button {
-				display: inline-block;
-				cursor: pointer;
-				text-decoration: none;
-				color: $white;
-				top: 45%;
-				left: 45%;
-			}
 		}
 	}
 	&:active {
 		color: $color_regal_blue_approx;
 		background-color: linear-gradient(to bottom, $color_lochmara_approx, $color_regal_blue_approx);
 	}
+}
+
+@keyframes fadeIn {
+	to {
+		opacity: 1;
+	}
+}
+.fade-in {
+	opacity: 0;
+	animation: fadeIn 1.3s ease-in 1 forwards;
+}
+.is-paused {
+	animation-play-state: paused;
+}
+.swiper-container {
+	@include size(100%, 100vh);
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+	background: $color_spindle_approx !important;
+}
+.swiper-slide {
+	img {
+		@include size(100%, auto);
+	}
+}
+
+/* ---- grid ---- */
+
+.grid {
+	background: #DDD;
+  }
+
+  .grid:after {
+	content: '';
+	display: block;
+	clear: both;
+  }
+  
+  /* ---- .grid-item ---- */
+  
+  .grid-sizer,
+  .grid-item {
+	width: 33.333%;
+  }
+  
+  .grid-item {
+	float: left;
+  }
+  
+  .grid-item a img {
+	display: block;
+	max-width: 100%;
+  }
+
+
+
+.insta-shop {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	background: linear-gradient(to bottom, $color_lochmara_approx, $color_regal_blue_approx);
+}
+.insta-shop-text {
+	color: $white;
+	margin: 5px;
 }
 .insta-button {
 	background-color: transparent;
@@ -74,125 +130,10 @@ a {
 		@extend %main_styles_extend_2;
 	}
 }
-@keyframes fadeIn {
-	to {
-		opacity: 1;
-	}
-}
-.fade-in {
-	opacity: 0;
-	animation: fadeIn 1.3s ease-in 1 forwards;
-}
-.is-paused {
-	animation-play-state: paused;
-}
-.swiper-container {
-	width: 100%;
-	height: 125vh;
-}
-.striper {
-	@include position(absolute, 0 0 0 0);
-	@include size(100%);
-	transform: skewY(-6deg) !important;
-	transform-origin: top left;
-}
-.striper1 {
-	@include position(absolute, 0 0 0 0);
-	@include size(100%);
-	transform: skewY(-6deg) !important;
-	transform-origin: top right;
-}
 
-.bg-1 {
-	@include backgroundMixin($url_0);
-}
-.bg-2 {
-	@include backgroundMixin($url_1);
-}
-.bg-3 {
-	@include backgroundMixin($url_2);
-}
-.bg-4 {
-	@include backgroundMixin($url_3);
-}
-.bg-5 {
-	@include backgroundMixin($url_4);
-	position: relative !important;
-}
-.dimmed {
-	position: relative;
-	&:after {
-		content: " ";
-		z-index: 1;
-		display: block;
-		position: absolute;
-		height: 100%;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: $black_30;
-	}
-}
-.swiper-pagination-bullet-active {
-	opacity: 1;
-	background: $color_spindle_approx !important;
-}
-.animatePhoto {
-	opacity: 0;
-	animation-duration: 1s;
-	margin: 0;
-	overflow: hidden;
-	.animated {
-		opacity: 1;
-	}
-	img {
-		opacity: 1;
-		height: auto;
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-		transform: scale(0.95);
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
-		transition: transform 0.5s, opacity 0.5s;
-		&:hover {
-			opacity: 0.7;
-			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
-			transform: scale(1.03);
-		}
-	}
-}
-.arrivals-button {
-	background-color: transparent;
-	display: none;
-	border: 1px solid $white;
-	color: $white;
-	padding: 8px 26px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 16px;
-	margin: 4px 2px;
-	position: absolute !important;
-	padding-bottom: 8px !important;
-	&:hover {
-		display: inline-block;
-		cursor: pointer;
-		text-decoration: none;
-		color: $white;
-		top: 45%;
-		left: 45%;
-	}
-}
-.insta-shop {
-	padding-top: 40px;
-	padding-bottom: 40px;
-	background: linear-gradient(to bottom, $color_lochmara_approx, $color_regal_blue_approx);
-}
-.insta-shop-text {
-	color: $white;
-	margin: 5px;
-}
 .s2 {
-	width: 100%;
-	height: 100%;
-	overflow-x: hidden;
+	@include size(100%, 50vh);	
+	overflow: hidden;
 }
 .carousel-slide {
 	text-align: center;
@@ -203,31 +144,29 @@ a {
 	align-items: center;
 	img {
 		opacity: 0.7;
-		width: 100%;
-		height: auto;
-		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		@include size(100%, auto);
 		transform: scale(1.15);
-		//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 		transition: transform 0.5s, opacity 0.5s;
 		&:hover {
 			opacity: 1;
-			//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
 			transform: scale(1.03);
 		}
 	}
 }
 .insta-photo {
-	width: 100%;
-	margin: 0;
+	width:100%;
+	// @include size(100%, null);
+	@include margin(0);
 	overflow: hidden;
 	background-color: $black;
 }
+
+// Other Pages
 .overlay-b {
 	width: 100%;
 	z-index: 2;
 	left: 0;
 	top: 0;
-	//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
 	transition: 0.5s;
 	padding: 10px;
 	border-bottom: 1px solid $black;
@@ -250,18 +189,25 @@ a {
 	z-index: 0;
 }
 .form-box {
-	width: 50%;
-	position: absolute;
-	top: 0;
-	right: 0;
+	@include size(50%, 630px);
+	@include position(absolute, 0 0 null null);
 	background-color: $white_80;
-	height: 630px;
 	padding-top: 40px;
 	z-index: 10;
 }
-.col-12.above.js-fade.fade-in {
+
+.header-text {
 	position: absolute !important;
-	top: 10%;
+	z-index: 1;
+	display: flex;
+	width: 100%;
+	height: 100%;
+    justify-content: center;
+    align-items: center;
+	@media only screen and (max-width:1025px){
+		top:17%;
+		align-items: unset;
+	}
 }
 .boiler-styles.main-nav li a {
 	&:link {

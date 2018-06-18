@@ -18,40 +18,35 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:500,400,300,200,100' rel='stylesheet' type='text/css'>
-    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
-
-    <!-- Sass -->
     <link rel="stylesheet" href="resources/css/main.css">
 
 </head>
 
 <body>
     <div class="container-fluid">
-        <nav id="#navBar" class="topnav overlay">
-            <div class="justify-content-center">
-                <div id="mobile-nav-icon" onclick="mobileNav()" class="fpm">
+        <nav>
+            <div>
+                <div id="mobileNavButton">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <div class="row justify-content-center">
-                    <a href="index.html" class="img-main" alt="home link">
+                <div>
+                    <a href="index.html" class="logo" alt="home link">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="350" viewBox="0 0 1674 306" alt="Dare Me Bikini Logo">
                             <image y="4" width="1673" height="302" xlink:href="data:img/png;base64,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"
                             />
                         </svg>
                     </a>
-                    <a href="index.html" class="logo-mini">
+                    <a href="index.html" class="mobileLogo">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150" height="70" viewBox="0 0 918 603">
                             <image x="2" width="916" height="602" xlink:href="data:img/png;base64,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"
                             />
                         </svg>
                     </a>
-
                 </div>
-                <div class="row">
+                <div>
                     <ul class="main-nav">
                         <li>
                             <a href="shop.html">Swimwear</a>
@@ -59,10 +54,19 @@
                         <li>
                             <a href="curvy-girl.html">Curvy Girl</a>
                         </li>
+                        <li>
+                            <a href="curvy-girl.html">4th of July</a>
+                        </li>
+                        <li>
+                            <a href="curvy-girl.html">Jamie Villamor</a>
+                        </li>
+                        <li>
+                            <a href="curvy-girl.html">Gallery</a>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div id="mySidenav" class="fps sidenav">
+            <div id="sideNav">
                 <a href="exclusives.html">Exclusives</a>
                 <a href="shop.html">Swimwear</a>
                 <a href="curvy-girl.html">Curvy Girl</a>
@@ -76,52 +80,45 @@
     <div class="container-fluid">
         <div class="row">
             <div class="swiper-container">
-                <div class="swiper-wrapper striper">
-                    <a href="store/exclusives.html" class="swiper-slide bg-1 img-fluid"></a>
-                    <a href="store/swimwear.html" class="swiper-slide bg-2 img-fluid"></a>
-                    <a href="store/curvy-girl.html" class="swiper-slide bg-3 img-fluid"></a>
-                    <a href="store/on-sale.html" class="swiper-slide bg-4 img-fluid"></a>
-                    <a href="store/insta-shop.html" class="swiper-slide bg-5 img-fluid"></a>
+                <div class="swiper-wrapper">
+                    <a href="store/exclusives.html" class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/frontpage/_5001474.jpg" alt="">
+                    </a>
+                    <a href="store/exclusives.html" class="swiper-slide">
+                        <img class="img-fluid" src="assets/img/frontpage/_5001427.jpg" alt="">
+                    </a>
                 </div>
             </div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-next swiper-button-next1"></div>
-            <div class="swiper-button-prev swiper-button-prev1"></div>
-            <div class="text-center col-12 above js-fade fade-in is-paused">
-                <img class="img-fluid" src="assets/img/coming-soon.png" alt="">
+            <div class="text-center col-12 header-text js-fade fade-in is-paused">
+                <h2>Get Ready For The 4th!</h2>
             </div>
         </div>
     </div>
-    <div class="container-fluid mt-10 shop-section" style="height:90vh;">
-        <div class="row h-100 align-items-center grid">
-            <div class="col-12 above text-center">
-                <a href="store/insta-shop.html">
-                    <img id="animateShop" src="assets/img/newarrivalsbgdown.png" alt="New Arrivals section" class="img-fluid animatePhoto">
-                </a>
-            </div>
-            <div class="col-12 col-md-6 above text-center pb-5 animatePhoto" id="animatePhoto1">
-                <a href="">
-                    <img src="assets/demoimg/ph1.JPG" alt="" class="img-fluid">
-                </a>
-                <a href="" class="arrivals-button">SHOP IT.</a>
-            </div>
-            <div class="col-12 col-md-6 above text-center pb-5 animatePhoto" id="animatePhoto2">
-                <a href="">
-                    <img src="assets/demoimg/ph2.JPG" alt="" class="img-fluid">
-                </a>
-                <a href="" class="arrivals-button">SHOP IT.</a>
+    <!-- <div class="container-fluid mt-5">
+        <div class="col-12 text-center">
+            <a href="store/insta-shop.html">
+                <h2>New Arrivals</h2>
+            </a>
+        </div>
+        <div class="grid">
+            <div class="grid-item grid-item--width2">
+               <a href="">
+                   <img src="" alt="">
+               </a> 
             </div>
         </div>
-    </div>
-    <div class="container-fluid bg-5 striper1" style="height:100vh;">
+
+    </div> -->
+<!-- Change to jarralax -->
+    <div class="container-fluid bg-5" style="height:100vh;">
     </div>
     <div class="insta-shop">
-        <div class="container-fluid mt-5 pt-4">
-            <div class="row justify-content-center mb-5 mt-5">
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center mb-5">
                 <a href="store/insta-shop.html">
-                    <img id="animateShopLook" src="assets/img/shop-the-look.png" alt="Instagram-shop section" class="img-fluid animatePhoto">
+                    <h2>Shop the Look.</h2>
                 </a>
-
             </div>
         </div>
         <div>
@@ -129,115 +126,109 @@
                 <div class="swiper-wrapper clearfix">
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm1.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/aquagoldandwhitestripe.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm2.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/blackandgoldtwelverings.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm3.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/blackandnudetwostringring.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm4.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/blackandwhitetwostringring.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm5.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/blacktwelvering.JPG" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm6.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/blacktwelverings.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm7.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/crisscrossteal.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm8.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/mermaidbikini.jpg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm9.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/pinkandsilvertwostringring.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm10.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/purplecrisscross.jpg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm11.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/purpletwelvering.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm12.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/racerscrunchbutt.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm13.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/redandnude2strings.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm14.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/redandsilvertwelverings.jpg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm15.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/romeo.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm16.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/sailorjerry.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm17.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/versacetwelverings.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
-                            <img src="assets/demoimg/dm18.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/demoimg/dm19.jpg" alt="" class="img-fluid">
+                            <img src="assets/img/shopinsta/whiteandgold12ring.jpeg" alt="" class="img-fluid">
                         </a>
                         <a href="" class="insta-button" id="">SHOP IT.</a>
                     </div>
@@ -277,33 +268,26 @@
             <ul class="list-unstyled inline">
                 <li>
                     <a href="https://www.facebook.com/daremebikini/">
-                        <i class="fab fa-facebook-square fa-2x"></i>
+                        <svg class="facebook" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"/></svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/daremebikini/">
-                        <i class="fab fa-instagram fa-2x"></i>
+                        <svg class="instagram" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                     </a>
                 </li>
             </ul>
         </div>
         <div class="row justify-content-center">
             <div class="text-center">
-                <small class="d-block mb-3 mt-3">Dare Me Bikini &copy; 1997-2018. All Rights Reserved. Built By
-                    <p>
-                        <a class="brandon" href="http://www.brandonsireland.com">Brandon Ireland</a>
-                    </p>
+                <small class="d-block mb-3 mt-3">Dare Me Bikini &copy; 1997-2018. All Rights Reserved.
                 </small>
             </div>
         </div>
     </footer>
 
     <script src="vendors/js/swiper.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="vendors/js/bootstrap.min.js"></script>
+    <script src="vendors/js/masonry.pkgd.min.js"></script>
     <script src="vendors/js/noframework.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
 </body>

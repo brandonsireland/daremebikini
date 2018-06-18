@@ -1,90 +1,71 @@
-
 .logo {
-    @include margin(null auto);
-    width: 332px;
-    @include padding(10px);
+	@include margin(null auto);
+	width: 332px;
+	@include padding(10px);
 	display: block;
 	&:focus {
 		outline: 0;
 	}
-}
-.logo-mini {
-	outline: 0;
-    display: none;
-    @include size(auto, 60px);
-    @include margin(auto);
-	margin-bottom: 10px;
-	margin-top: 8px;
+	@media only screen and (max-width:790px) {
+		display: none;
+	}
 }
 
-.overlay {
-    @include position(fixed, 0 null null 0 );
+.mobileLogo {
+	outline: 0;
+	display: none;
+	justify-content: center;
+	@media only screen and (max-width: 790px) {
+		display:flex;
+	}
+}
+
+nav {
+	@include position(fixed, 0 null null 0);
 	width: 100%;
 	z-index: 2;
-	background-color: $black_40;
-	transition: 0.5s;
-    @include padding(10px);
-}
-.main-nav {
-    list-style: none;
-    @include margin(20px auto 10px auto);
-	display: block;
-	text-align: center;
-	li {
-        display: inline-block;
-        @include margin(null 15px);
-		a {
-			&:link {
-				@extend %header_extend_1;
+	@include padding(10px);
+	.main-nav {
+		list-style: none;
+		@include margin(20px auto 10px auto);
+		display: block;
+		text-align: center;
+		li {
+			display: inline-block;
+			@include margin(null 15px);
+			a {
+				&:link {
+					@extend %header_extend_1;
+				}
+				&:visited {
+					@extend %header_extend_1;
+				}
+				&:hover {
+					@extend %header_extend_2;
+				}
+				&:active {
+					@extend %header_extend_2;
+				}
 			}
-			&:visited {
-				@extend %header_extend_1;
-			}
-			&:hover {
-				@extend %header_extend_2;
-			}
-			&:active {
-				@extend %header_extend_2;
-			}
+		}
+		@media only screen and (max-width:1025px){
+			display:none;
 		}
 	}
 }
-.sticky {
-    @include position(fixed, 0 null null 0);
-    @include size(100%, auto);
-	background-color: $black_40;
-	box-shadow: 0 2px 2px #efefef07;
-    z-index: 9999;
-    @include padding(10px);
-	.main-nav li a {
-		&:link {
-			color: $white;
-		}
-		&:visited {
-			color: $white;
-		}
-		&:active {
-			@extend %header_extend_3;
-		}
-		&:hover {
-			@extend %header_extend_3;
-		}
-	}
-}
-#navBar {
-	overflow: hidden;
-}
-#mobile-nav-icon {
+
+#mobileNavButton {
 	width: 50px;
-    float: left;
-    @include margin(17px null null 10px);
+	float: left;
+	@include margin(17px null null 10px);
 	transform: rotate(0deg);
 	transition: .5s ease-in-out;
 	cursor: pointer;
+	display: none;
 	span {
-        display: none;
-        @include position(absolute, null null null 0);
-        @include size(100% ,4px);
+		background-color: $white;
+		@include position(absolute, null null null 0);
+		@include size(100%, 4px);
 		border-radius: 9px;
 		opacity: 1;
 		transform: rotate(0deg);
@@ -116,19 +97,21 @@
 			@extend %header_extend_4;
 		}
 	}
+	@media only screen and(max-width:1025px) {
+		display: block;
+	}
 }
-.fps {
+
+#sideNav {
+	@include size(0, 100%);
+	@include position(fixed, 96px null null 0);
 	background-color: $white;
-}
-.sidenav {
-    @include size(0,100%);
-    @include position(fixed, 96px null null 0);
 	z-index: 100;
 	overflow: hidden;
 	transition: 0.5s;
 	padding-top: 60px;
 	a {
-        @include padding(8px 8px 8px 32px);
+		@include padding(8px 8px 8px 32px);
 		text-decoration: none;
 		font-size: 25px;
 		color: $color_gray_approx;
@@ -138,20 +121,23 @@
 			color: $color_lochmara_approx;
 		}
 	}
-	.closebtn {
-        @include position(absolute, 0 25px null null);
-		font-size: 36px;
-		margin-left: 50px;
+	&.open {
+		width: 100%;
 	}
 }
+
 @media screen and(max-height: 450px) {
-	.sidenav {
+	#sideNav {
 		padding-top: 15px;
 		a {
 			font-size: 18px;
 		}
 	}
 }
-.fpm span {
-	background: $white;
+
+.swiper-button-next,
+.swiper-button-prev {
+	&:focus {
+		outline:none;
+	}
 }
