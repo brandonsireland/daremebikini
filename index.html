@@ -18,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
-    <link rel="stylesheet" href="resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="vendors/css/jarallax.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
 
 </head>
 
@@ -80,7 +81,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="swiper-container">
-                <div class="swiper-wrapper">
+                <div class="swiper-wrapper" id="headerSwiper">
                     <a href="store/exclusives.html" class="swiper-slide">
                         <img class="img-fluid" src="assets/img/frontpage/_5001474.jpg" alt="">
                     </a>
@@ -95,34 +96,29 @@
             </div>
         </div>
     </div>
-    <!-- <div class="container-fluid mt-5">
-        <div class="col-12 text-center">
-            <a href="store/insta-shop.html">
-                <h2>New Arrivals</h2>
-            </a>
-        </div>
-        <div class="grid">
-            <div class="grid-item grid-item--width2">
-               <a href="">
-                   <img src="" alt="">
-               </a> 
-            </div>
-        </div>
+    <!-- Mason Grid -->
 
-    </div> -->
-<!-- Change to jarralax -->
-    <div class="container-fluid bg-5" style="height:100vh;">
-    </div>
-    <div class="insta-shop">
-        <div class="container-fluid mt-5">
-            <div class="row justify-content-center mb-5">
-                <a href="store/insta-shop.html">
-                    <h2>Shop the Look.</h2>
+    <div class="jarallax" id="jarallax" style="height:200vh">
+            <img class="jarallax-img" src="assets/img/demo/b1.jpg" alt="">
+            <div id="firstPhoto">
+                <a href="">
+                    <img src="assets/img/demo/b1.jpg" alt="">
                 </a>
             </div>
-        </div>
-        <div>
-            <div class="s2">
+            <div id="secondPhoto">
+                <a href="">
+                    <img src="assets/img/demo/b2.jpg" alt="">
+                </a>
+            </div>
+            <div id="thirdPhoto">
+                <a href="">
+                    <img src="assets/img/demo/b3.jpg" alt="">
+                </a>
+            </div>
+      </div>
+
+    <!-- Insta Shop -->
+            <div class="swiper-two">
                 <div class="swiper-wrapper clearfix">
                     <div class="carousel-slide swiper-slide insta-photo">
                         <a href="">
@@ -237,14 +233,7 @@
                 <div class="swiper-button-next swiper-button-next2 swiper-button-white"></div>
                 <div class="swiper-button-prev swiper-button-prev2 swiper-button-white"></div>
             </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row insta-shop-text mt-5">
-                <p class="container-fluid text-center">Have awesome Instagram photos with Dare Me Bikini? Hashtag #DareMeBikini and have a chance to be featured
-                    in our Insta Shop section!</p>
-            </div>
-        </div>
-    </div>
+        
 
     <footer class="container-fluid pt-md-5 footer">
         <div class="row justify-content-center">
@@ -268,12 +257,18 @@
             <ul class="list-unstyled inline">
                 <li>
                     <a href="https://www.facebook.com/daremebikini/">
-                        <svg class="facebook" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"/></svg>
+                        <svg class="facebook" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M448 56.7v398.5c0 13.7-11.1 24.7-24.7 24.7H309.1V306.5h58.2l8.7-67.6h-67v-43.2c0-19.6 5.4-32.9 33.5-32.9h35.8v-60.5c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9h-58.4v67.6h58.4V480H24.7C11.1 480 0 468.9 0 455.3V56.7C0 43.1 11.1 32 24.7 32h398.5c13.7 0 24.8 11.1 24.8 24.7z"
+                            />
+                        </svg>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/daremebikini/">
-                        <svg class="instagram" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                        <svg class="instagram" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                            />
+                        </svg>
                     </a>
                 </li>
             </ul>
@@ -286,10 +281,10 @@
         </div>
     </footer>
 
-    <script src="vendors/js/swiper.min.js"></script>
-    <script src="vendors/js/masonry.pkgd.min.js"></script>
-    <script src="vendors/js/noframework.waypoints.min.js"></script>
-    <script src="resources/js/script.js"></script>
+    <script type="text/javascript" src="vendors/js/swiper.min.js"></script>
+    <script type="text/javascript" src="vendors/js/jarallax.min.js"></script>
+    <script type="text/javascript" src="vendors/js/noframework.waypoints.min.js"></script>
+    <script type="text/javascript" src="resources/js/script.js"></script>
 </body>
 
 </html>

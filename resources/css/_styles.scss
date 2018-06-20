@@ -1,3 +1,4 @@
+// General
 
 body {
 	text-rendering: optimizeLegibility;
@@ -49,6 +50,8 @@ a {
 	}
 }
 
+// For header Title
+
 @keyframes fadeIn {
 	to {
 		opacity: 1;
@@ -75,35 +78,7 @@ a {
 	}
 }
 
-/* ---- grid ---- */
-
-.grid {
-	background: #DDD;
-  }
-
-  .grid:after {
-	content: '';
-	display: block;
-	clear: both;
-  }
-  
-  /* ---- .grid-item ---- */
-  
-  .grid-sizer,
-  .grid-item {
-	width: 33.333%;
-  }
-  
-  .grid-item {
-	float: left;
-  }
-  
-  .grid-item a img {
-	display: block;
-	max-width: 100%;
-  }
-
-
+// Shop
 
 .insta-shop {
 	padding-top: 40px;
@@ -131,9 +106,8 @@ a {
 	}
 }
 
-.s2 {
+.swiper-two {
 	@include size(100%, 50vh);	
-	overflow: hidden;
 }
 .carousel-slide {
 	text-align: center;
@@ -160,6 +134,7 @@ a {
 	overflow: hidden;
 	background-color: $black;
 }
+
 
 // Other Pages
 .overlay-b {
@@ -229,4 +204,21 @@ a {
 }
 .bpm span {
 	background: $black;
+}
+
+
+// images
+.jarallax {
+	display:flex;
+	// flex-direction: row;
+	width:100%;
+	div	{
+		width:40%;
+		a{
+			img{
+				width:100%;
+				height: auto;
+			}
+		}
+	}
 }

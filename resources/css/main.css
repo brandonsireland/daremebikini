@@ -47,9 +47,11 @@ nav .main-nav li a:link, nav .main-nav li a:visited {
 }
 
 nav .main-nav li a:hover, nav .main-nav li a:active {
-  color: #007ac1;
+  color: white;
   border-bottom: none;
-  text-decoration: none;
+  -webkit-box-shadow: 2px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
 }
 
 #mobileNavButton.open span:nth-child(1), #mobileNavButton.open span:nth-child(4) {
@@ -381,32 +383,6 @@ a:active {
   width: 100%;
 }
 
-/* ---- grid ---- */
-.grid {
-  background: #DDD;
-}
-
-.grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* ---- .grid-item ---- */
-.grid-sizer,
-.grid-item {
-  width: 33.333%;
-}
-
-.grid-item {
-  float: left;
-}
-
-.grid-item a img {
-  display: block;
-  max-width: 100%;
-}
-
 .insta-shop {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -433,10 +409,9 @@ a:active {
   padding-bottom: 8px !important;
 }
 
-.s2 {
+.swiper-two {
   height: 50vh;
   width: 100%;
-  overflow: hidden;
 }
 
 .carousel-slide {
@@ -569,5 +544,21 @@ a:active {
 
 .bpm span {
   background: black;
+}
+
+.jarallax {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.jarallax div {
+  width: 40%;
+}
+
+.jarallax div a img {
+  width: 100%;
+  height: auto;
 }
 /*# sourceMappingURL=main.css.map */

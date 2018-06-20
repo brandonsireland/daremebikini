@@ -48,9 +48,10 @@ $url_4: url('../../assets/demoimg/bg5.jpg');
 }
 
 %header_extend_2 {
-	color: $color_lochmara_approx;
+	color: $white;
 	border-bottom: none;
-	text-decoration: none;
+	box-shadow: 2px $black_30;
+	font-weight: 700;
 }
 
 %header_extend_3 {
