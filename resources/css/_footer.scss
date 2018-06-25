@@ -1,5 +1,9 @@
 
 footer {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     @extend %footer_extend_1;
     ul.inline{
         li {
@@ -16,6 +20,9 @@ footer {
                 }
             }
         }
+    }
+    &.boiler{
+        border-top:1px solid $color_fuscous_gray_approx;
     }
 }
 

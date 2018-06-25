@@ -1,0 +1,110 @@
+div.boilerplate {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    @media only screen and (max-width:650px){
+        padding: 50px;
+    }
+    div {
+        padding:0 100px;
+        @media only screen and (max-width:650px){
+            padding: 0;
+        }
+    }
+}
+
+// Contact Us
+
+
+.map-box {
+	width: 100%;
+	height: 630px;
+    position: relative;
+    .map {
+	width: 100%;
+	height: 630px;
+	position: relative;
+	z-index: 0;
+    }
+    @media only screen and (max-width:991px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.form-box {
+	@include size(50%, 100%);
+	@include position(absolute, 0 0 null null);
+	background-color: $white_80;
+	padding: 40px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    form {
+        div {
+            width: 80%;
+            padding: 0 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            @media only screen and (max-width: 991px){
+                width: 100%;
+            }
+        }   
+    }
+    h1 {
+        padding:0 10px;
+        @media only screen and (max-width:991px){
+            font-size:1.5em;
+        }
+    }
+    .contact-form {
+        width: 60%;
+        margin: 0 auto;
+    }
+    input[type=text],
+    input[type=email],
+    select,
+    textarea {
+        width: 100%;
+        padding: 7px;
+        border-radius: 3px;
+        border: 1px solid #ccc;
+    }
+    textarea {
+        height: 100px;
+    }
+    input[type=checkbox] {
+        margin: 10px 5px 10px 0;
+    }
+    *:focus {outline: none;}
+    .send-button {
+        margin: 20px 0;
+        width: 130px;
+        border: 1px solid $color_gray_approx;
+        padding: 10px 20px !important;
+        &:hover{
+            background-color:white;
+            color:black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+    }
+    @media only screen and (max-width: 991px){
+        // position: relative;
+        width: 100%;
+    }
+}
+
+
+
+.address {
+    
+    @media only screen and (max-width:991px){
+        display:flex;
+    }
+    div {
+        @media only screen and (max-width:991px){
+            padding: 0 10px;
+        }
+    }
+}

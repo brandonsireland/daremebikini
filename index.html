@@ -17,14 +17,13 @@
 
     <link rel="stylesheet" type="text/css" href="vendors/css/swiper.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="vendors/css/jarallax.css">
     <link rel="stylesheet" type="text/css" href="resources/css/main.css">
 
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div>
         <nav>
             <div>
                 <div id="mobileNavButton">
@@ -58,9 +57,9 @@
                         <li>
                             <a href="curvy-girl.html">4th of July</a>
                         </li>
-                        <li>
+                        <!-- <li>
                             <a href="curvy-girl.html">Jamie Villamor</a>
-                        </li>
+                        </li> -->
                         <li>
                             <a href="curvy-girl.html">Gallery</a>
                         </li>
@@ -68,176 +67,177 @@
                 </div>
             </div>
             <div id="sideNav">
-                <a href="exclusives.html">Exclusives</a>
                 <a href="shop.html">Swimwear</a>
                 <a href="curvy-girl.html">Curvy Girl</a>
-                <a href="instashop.html">InstaShop</a>
-                <a href="sale.html">On Sale</a>
-                <a href="press.html">Press</a>
+                <a href="instashop.html">4th of July</a>
+                <a href="sale.html">Gallery</a>
             </div>
         </nav>
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="swiper-container">
-                <div class="swiper-wrapper" id="headerSwiper">
-                    <a href="store/exclusives.html" class="swiper-slide">
-                        <img class="img-fluid" src="assets/img/frontpage/_5001474.jpg" alt="">
-                    </a>
-                    <a href="store/exclusives.html" class="swiper-slide">
-                        <img class="img-fluid" src="assets/img/frontpage/_5001427.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-            <div class="text-center col-12 header-text js-fade fade-in is-paused">
-                <h2>Get Ready For The 4th!</h2>
+    <div class="header-container">
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="headerSwiper">
+                <a href="store/exclusives.html" class="swiper-slide">
+                    <img src="assets/img/frontpage/_5001474.jpg" alt="">
+                </a>
+                <a href="store/exclusives.html" class="swiper-slide">
+                    <img src="assets/img/frontpage/_5001427.jpg" alt="">
+                </a>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next swiper-button-next2 swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-prev2 swiper-button-white"></div>
+        <div class="header-text js-fade fade-in is-paused">
+            <h2>Get Ready For The 4th!</h2>
+        </div>
     </div>
-    <!-- Mason Grid -->
 
-    <div class="jarallax" id="jarallax" style="height:200vh">
-            <img class="jarallax-img" src="assets/img/demo/b1.jpg" alt="">
-            <div id="firstPhoto">
+
+    <!-- Offset Grid -->
+
+    <div class="jarallax top-jarallax" id="jarallax">
+        <img class="jarallax-img" src="assets/img/frontpage/_5000286.jpg" alt="">
+        <div id="firstPhoto" data-jarallax-element="-40">
+            <h2> - Whats Hot -</h2>
+            <a href="">
+                <img src="assets/img/frontpage/whatshot1.jpg" alt="">
+            </a>
+        </div>
+        <div id="secondPhoto" data-jarallax-element="-100">
+            <a href="">
+                <img src="assets/img/frontpage/whatshot2.jpg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <!-- Jarallax -->
+    <div class="jarallax" id="bottomJarallax" style="height:50vh">
+            <img class="jarallax-img" src="assets/img/frontpage/_5009935.jpg" alt="">
+            <h2>#Insta Shop</h2>
+        </div>
+
+<!-- Insta Shop -->
+    <div class="swiper-two">
+        <div class="swiper-wrapper clearfix">
+            <div class="carousel-slide swiper-slide">
                 <a href="">
-                    <img src="assets/img/demo/b1.jpg" alt="">
+                    <img src="assets/img/shopinsta/aquagoldandwhitestripe.jpeg" alt="">
                 </a>
+                <a href="" class="insta-button">SHOP IT.</a>
             </div>
-            <div id="secondPhoto">
+            <div class="carousel-slide swiper-slide">
                 <a href="">
-                    <img src="assets/img/demo/b2.jpg" alt="">
+                    <img src="assets/img/shopinsta/blackandgoldtwelverings.jpeg" alt="">
                 </a>
+                <a href="" class="insta-button">SHOP IT.</a>
             </div>
-            <div id="thirdPhoto">
+            <div class="carousel-slide swiper-slide">
                 <a href="">
-                    <img src="assets/img/demo/b3.jpg" alt="">
+                    <img src="assets/img/shopinsta/blackandnudetwostringring.jpeg" alt="">
                 </a>
+                <a href="" class="insta-button">SHOP IT.</a>
             </div>
-      </div>
-
-    <!-- Insta Shop -->
-            <div class="swiper-two">
-                <div class="swiper-wrapper clearfix">
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/aquagoldandwhitestripe.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/blackandgoldtwelverings.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/blackandnudetwostringring.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/blackandwhitetwostringring.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/blacktwelvering.JPG" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/blacktwelverings.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/crisscrossteal.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/mermaidbikini.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/pinkandsilvertwostringring.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/purplecrisscross.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/purpletwelvering.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/racerscrunchbutt.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/redandnude2strings.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/redandsilvertwelverings.jpg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/romeo.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/sailorjerry.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/versacetwelverings.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                    <div class="carousel-slide swiper-slide insta-photo">
-                        <a href="">
-                            <img src="assets/img/shopinsta/whiteandgold12ring.jpeg" alt="" class="img-fluid">
-                        </a>
-                        <a href="" class="insta-button" id="">SHOP IT.</a>
-                    </div>
-                </div>
-
-                <div class="swiper-button-next swiper-button-next2 swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-prev2 swiper-button-white"></div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/blackandwhitetwostringring.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button">SHOP IT.</a>
             </div>
-        
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/blacktwelvering.JPG" alt="">
+                </a>
+                <a href="" class="insta-button">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/blacktwelverings.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/crisscrossteal.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/mermaidbikini.jpg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/pinkandsilvertwostringring.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/purplecrisscross.jpg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/purpletwelvering.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/racerscrunchbutt.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/redandnude2strings.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/redandsilvertwelverings.jpg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/romeo.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/sailorjerry.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/versacetwelverings.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+            <div class="carousel-slide swiper-slide">
+                <a href="">
+                    <img src="assets/img/shopinsta/whiteandgold12ring.jpeg" alt="">
+                </a>
+                <a href="" class="insta-button" id="">SHOP IT.</a>
+            </div>
+        </div>
 
-    <footer class="container-fluid pt-md-5 footer">
-        <div class="row justify-content-center">
-            <ul class="list-unstyled inline text-center">
+        <div class="swiper-button-next swiper-button-next2 swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-prev2 swiper-button-white"></div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <ul class="inline">
                 <li>
                     <a href="contact-us.html">Contact Us</a>
                 </li>
@@ -245,16 +245,13 @@
                     <a href="returns.html">Return Policy</a>
                 </li>
                 <li>
-                    <a href="shipping-policy.html">Shipping Policy</a>
-                </li>
-                <li>
                     <a href="size-chart.html">Size Chart</a>
                 </li>
 
             </ul>
         </div>
-        <div class="row justify-content-center">
-            <ul class="list-unstyled inline">
+        <div>
+            <ul class="inline">
                 <li>
                     <a href="https://www.facebook.com/daremebikini/">
                         <svg class="facebook" height="40px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -273,8 +270,8 @@
                 </li>
             </ul>
         </div>
-        <div class="row justify-content-center">
-            <div class="text-center">
+        <div>
+            <div>
                 <small class="d-block mb-3 mt-3">Dare Me Bikini &copy; 1997-2018. All Rights Reserved.
                 </small>
             </div>
@@ -283,7 +280,7 @@
 
     <script type="text/javascript" src="vendors/js/swiper.min.js"></script>
     <script type="text/javascript" src="vendors/js/jarallax.min.js"></script>
-    <script type="text/javascript" src="vendors/js/noframework.waypoints.min.js"></script>
+    <script type="text/javascript" src="vendors/js/jarallax-element.min.js"></script>
     <script type="text/javascript" src="resources/js/script.js"></script>
 </body>
 
