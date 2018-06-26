@@ -310,6 +310,10 @@ div.header-container .header-text {
   }
 }
 
+div.header-container h2 {
+  cursor: default;
+}
+
 footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -399,6 +403,7 @@ h2 {
   font-size: 9vw;
   text-transform: none;
   font-weight: 300;
+  cursor: default;
 }
 
 h3 {
@@ -659,7 +664,7 @@ div.boilerplate div {
   right: 0;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 40px;
-  z-index: 10;
+  z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -759,5 +764,139 @@ div.boilerplate div {
   .address div {
     padding: 0 10px;
   }
+}
+
+section.size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px 20vw;
+}
+
+section.size h1 {
+  padding: 20px 0;
+}
+
+section.size div {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+  section.size div {
+    padding: 20px 0;
+  }
+}
+
+section.size table {
+  width: 100%;
+  padding: 0 0 20px;
+  border-collapse: collapse;
+}
+
+section.size table thead {
+  background-color: #007ac1;
+  color: white;
+}
+
+section.size table tr {
+  margin: 10px;
+  height: 4vh;
+}
+
+section.size table td {
+  text-align: center;
+  border-bottom: 1px solid #007ac1;
+}
+
+section.size table th {
+  border-bottom: 1px solid #007ac1;
+}
+
+@media only screen and (max-width: 1000px) {
+  section.size {
+    padding: 0;
+  }
+}
+
+section.size .bottoms-title h1 {
+  padding: 20px 0 0 0;
+}
+
+section.size .bottoms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 0;
+}
+
+section.size .bottoms div img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  section.size .bottoms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+section.look-book .grid .grid-item, section.look-book .grid .grid-item--width2 {
+  float: left;
+}
+
+section.look-book .grid .grid-item img, section.look-book .grid .grid-item--width2 img {
+  display: block;
+  max-width: 100%;
+}
+
+section.look-book .grid .grid-item h3, section.look-book .grid .grid-item--width2 h3 {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 4vw;
+  color: white;
+  font-family: "Playlist-Script";
+  text-transform: none;
+}
+
+section.look-book {
+  width: 100%;
+}
+
+section.look-book .grid .grid-sizer {
+  width: 33.333%;
+}
+
+section.look-book .grid .grid-item {
+  width: 33.333%;
+}
+
+section.look-book .grid .grid-item--width2 {
+  width: 66.666%;
+}
+
+section.look-book .grid:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 /*# sourceMappingURL=main.css.map */
