@@ -161,10 +161,10 @@ var headerSwiper = new Swiper('.swiper-container', {
   var instaSwiper = new Swiper('.swiper-two', {
     slidesPerView: 4,
     loop : true,
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
