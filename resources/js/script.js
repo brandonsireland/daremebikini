@@ -188,11 +188,21 @@ var headerSwiper = new Swiper('.swiper-container', {
 
 jarallax(document.querySelector('#jarallax'), {
     speed: 0.2,
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
 });
 jarallax(document.querySelector('#bottomJarallax'), {
-    speed: 0.2
+    speed: 0.2,
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
 });
-
+jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
+})
 // Shop the look button loop
 for (i = 0; i < document.getElementsByClassName('insta-photo').length; i++) {
     var instaPhoto = document.getElementsByClassName('insta-photo')[i];

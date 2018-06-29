@@ -549,6 +549,13 @@ a:active {
   width: 40%;
 }
 
+.jarallax div a {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .jarallax div a img {
   width: 100%;
   height: auto;
@@ -566,18 +573,13 @@ a:active {
   z-index: -1;
 }
 
-#firstPhoto {
+.jarallax #firstPhoto {
   position: absolute;
   top: 10%;
   left: 5%;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  background-color: white;
 }
 
-#firstPhoto h2 {
+.jarallax #firstPhoto h2 {
   font-family: "Raleway-Light";
   color: black;
   text-transform: uppercase;
@@ -585,12 +587,18 @@ a:active {
   text-align: center;
 }
 
-#firstPhoto:hover {
+.jarallax #firstPhoto:hover {
   -webkit-box-shadow: 0 12px 16px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 16px 8px rgba(0, 0, 0, 0.2);
 }
 
-#secondPhoto {
+@media only screen and (max-width: 640px) {
+  .jarallax #firstPhoto {
+    top: 30% !important;
+  }
+}
+
+.jarallax #secondPhoto {
   position: absolute;
   top: 20%;
   right: 5%;
@@ -600,9 +608,15 @@ a:active {
   transition: 0.3s;
 }
 
-#secondPhoto:hover {
+.jarallax #secondPhoto:hover {
   -webkit-box-shadow: 0 12px 16px 8px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 16px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 640px) {
+  .jarallax #secondPhoto {
+    top: 37%;
+  }
 }
 
 div.boilerplate {
