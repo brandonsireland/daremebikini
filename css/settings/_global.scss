@@ -1,0 +1,60 @@
+// General
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+	text-rendering: optimizeLegibility;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	font-family: $secondary-font;
+}
+
+.clearfix {
+	zoom: 1;
+	&:after {
+		content: '.';
+		clear: both;
+		display: block;
+		height: 0;
+		visibility: hidden;
+	}
+}
+
+h2 {
+	font-family: $primary-font;
+	color: $white;
+	font-size: 11vw;
+	text-transform: none;
+	font-weight: 300;
+	cursor: default;
+}
+
+h3 {
+	font-family: $secondary-font-light;
+	text-transform: uppercase;
+}
+
+a {
+	font-size: 16px;
+	&:link {
+		@extend %main_styles_extend_1;
+	}
+	&:visited {
+		@extend %main_styles_extend_1;
+	}
+	&:hover {
+		color: $color_regal_blue_approx;
+		background-color: linear-gradient(to bottom, $color_lochmara_approx, $color_regal_blue_approx);
+		&+ {
+			.insta-button {
+				@extend %main_styles_extend_2;
+			}
+		}
+	}
+	&:active {
+		color: $color_regal_blue_approx;
+		background-color: linear-gradient(to bottom, $color_lochmara_approx, $color_regal_blue_approx);
+	}
+}
