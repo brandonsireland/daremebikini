@@ -1,5 +1,5 @@
-assets/demoimg/*
-assets/img/*
-assets/logos/*
-vendors/*
-PHPMailer/*
+.vscode/*
+config/*
+config.yml
+prepros-6.config
+theme.lock

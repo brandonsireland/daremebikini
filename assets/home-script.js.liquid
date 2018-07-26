@@ -1,0 +1,218 @@
+(function(window){
+   
+//Fade in Header Text
+const el = document.querySelector('.js-fade');
+
+if (el.classList.contains('is-paused')) {
+    el.classList.remove('is-paused');
+}
+
+// Mobile Navigation Side Button
+
+const sidenav = document.querySelector('#sideNav');
+const navButton = document.querySelector('#mobileNavButton');
+navButton.addEventListener('click', clickNav = () => {
+    navButton.classList.toggle('open');
+    sidenav.classList.toggle('open');
+});
+
+
+// Header Swiper
+
+const headerImgArray = [
+    '{{ 'header_MG_6979.jpg' | asset_url }}',
+    '{{ 'header_5000022.jpg' | asset_url }}',
+    '{{ 'header_5000030.jpg' | asset_url }}',
+    '{{ 'header_5000033.jpg' | asset_url }}',
+    '{{ 'header_5000131.jpg' | asset_url }}',
+    '{{ 'header_5000133.jpg' | asset_url }}',
+    '{{ 'header_5000155.jpg' | asset_url }}',
+    '{{ 'header_5000022.jpg' | asset_url }}',
+    '{{ 'header_5000030.jpg' | asset_url }}',
+    '{{ 'header_5000033.jpg' | asset_url }}',
+    '{{ 'header_5000131.jpg' | asset_url }}',
+    '{{ 'header_5000133.jpg' | asset_url }}',
+    '{{ 'header_5000155.jpg' | asset_url }}',
+    '{{ 'header_5000158.jpg' | asset_url }}',
+    '{{ 'header_5000164.jpg' | asset_url }}',
+    '{{ 'header_5000286.jpg' | asset_url }}',
+    '{{ 'header_5000313.jpg' | asset_url }}',
+    '{{ 'header_5000343.jpg' | asset_url }}',
+    '{{ 'header_5000383.jpg' | asset_url }}',
+    '{{ 'header_5000385.jpg' | asset_url }}',
+    '{{ 'header_5000404.jpg' | asset_url }}',
+    '{{ 'header_5000475.jpg' | asset_url }}',
+    '{{ 'header_5000476.jpg' | asset_url }}',
+    '{{ 'header_5000526.jpg' | asset_url }}',
+    '{{ 'header_5000629.jpg' | asset_url }}',
+    '{{ 'header_5000690.jpg' | asset_url }}',
+    '{{ 'header_5000691.jpg' | asset_url }}',
+    '{{ 'header_5000702.jpg' | asset_url }}',
+    '{{ 'header_5000853.jpg' | asset_url }}',
+    '{{ 'header_5000854.jpg' | asset_url }}',
+    '{{ 'header_5000859.jpg' | asset_url }}',
+    '{{ 'header_5000872.jpg' | asset_url }}',
+    '{{ 'header_5000880.jpg' | asset_url }}',
+    '{{ 'header_5000896.jpg' | asset_url }}',
+    '{{ 'header_5000897.jpg' | asset_url }}',
+    '{{ 'header_5000910.jpg' | asset_url }}',
+    '{{ 'header_5000968.jpg' | asset_url }}',
+    '{{ 'header_5000994.jpg' | asset_url }}',
+    '{{ 'header_5001009.jpg' | asset_url }}',
+    '{{ 'header_5001182.jpg' | asset_url }}',
+    '{{ 'header_5001315.jpg' | asset_url }}',
+    '{{ 'header_5001329.jpg' | asset_url }}',
+    '{{ 'header_5001330.jpg' | asset_url }}',
+    '{{ 'header_5001411.jpg' | asset_url }}',
+    '{{ 'header_5001418.jpg' | asset_url }}',
+    '{{ 'header_5001439.jpg' | asset_url }}',
+    '{{ 'header_5001509.jpg' | asset_url }}',
+    '{{ 'header_5001519.jpg' | asset_url }}',
+    '{{ 'header_5001523.jpg' | asset_url }}',
+    '{{ 'header_5008720.jpg' | asset_url }}',
+    '{{ 'header_5008723.jpg' | asset_url }}',
+    '{{ 'header_5008732.jpg' | asset_url }}',
+    '{{ 'header_5008734.jpg' | asset_url }}',
+    '{{ 'header_5008740.jpg' | asset_url }}',
+    '{{ 'header_5008744.jpg' | asset_url }}',
+    '{{ 'header_5008747.jpg' | asset_url }}',
+    '{{ 'header_5008765.jpg' | asset_url }}',
+    '{{ 'header_5008770.jpg' | asset_url }}',
+    '{{ 'header_5008771.jpg' | asset_url }}',
+    '{{ 'header_5008799.jpg' | asset_url }}',
+    '{{ 'header_5008800.jpg' | asset_url }}',
+    '{{ 'header_5008813.jpg' | asset_url }}',
+    '{{ 'header_5008816.jpg' | asset_url }}',
+    '{{ 'header_5008822.jpg' | asset_url }}',
+    '{{ 'header_5008838.jpg' | asset_url }}',
+    '{{ 'header_5008840.jpg' | asset_url }}',
+    '{{ 'header_5008844.jpg' | asset_url }}',
+    '{{ 'header_5008894.jpg' | asset_url }}',
+    '{{ 'header_5008895.jpg' | asset_url }}',
+    '{{ 'header_5008898.jpg' | asset_url }}',
+    '{{ 'header_5008930.jpg' | asset_url }}',
+    '{{ 'header_5008952.jpg' | asset_url }}',
+    '{{ 'header_5008957.jpg' | asset_url }}',
+    '{{ 'header_5008965.jpg' | asset_url }}',
+    '{{ 'header_5008994.jpg' | asset_url }}',
+    '{{ 'header_5009075.jpg' | asset_url }}',
+    '{{ 'header_5009089.jpg' | asset_url }}',
+    '{{ 'header_5009125.jpg' | asset_url }}',
+    '{{ 'header_5009131.jpg' | asset_url }}',
+    '{{ 'header_5009166.jpg' | asset_url }}',
+    '{{ 'header_5009182.jpg' | asset_url }}',
+    '{{ 'header_5009232.jpg' | asset_url }}',
+    '{{ 'header_5009391.jpg' | asset_url }}',
+    '{{ 'header_5009403.jpg' | asset_url }}',
+    '{{ 'header_5009469.jpg' | asset_url }}',
+    '{{ 'header_5009528.jpg' | asset_url }}',
+    '{{ 'header_5009551.jpg' | asset_url }}',
+    '{{ 'header_5009570.jpg' | asset_url }}',
+    '{{ 'header_5009579.jpg' | asset_url }}',
+    '{{ 'header_5009585.jpg' | asset_url }}',
+    '{{ 'header_5009625.jpg' | asset_url }}',
+    '{{ 'header_5009626.jpg' | asset_url }}',
+    '{{ 'header_5009678.jpg' | asset_url }}',
+    '{{ 'header_5009773.jpg' | asset_url }}',
+    '{{ 'header_5009890.jpg' | asset_url }}',
+    '{{ 'header_5009913.jpg' | asset_url }}',
+    '{{ 'header_5009935.jpg' | asset_url }}',
+    '{{ 'header_5009964.jpg' | asset_url }}',
+    '{{ 'header_5009993.jpg' | asset_url }}',
+    '{{ 'header_MG_6457.JPG' | asset_url }}',
+    '{{ 'header_MG_6459.JPG' | asset_url }}',
+    '{{ 'header_MG_6471.JPG' | asset_url }}',
+    '{{ 'header_MG_6472.JPG' | asset_url }}',
+    '{{ 'header_MG_6639.JPG' | asset_url }}',
+    '{{ 'header_MG_6643.JPG' | asset_url }}',
+    '{{ 'header_MG_6793.JPG' | asset_url }}',
+    '{{ 'header_MG_6812.JPG' | asset_url }}',
+    '{{ 'header_MG_6873.JPG' | asset_url }}',
+    '{{ 'header_MG_6876.JPG' | asset_url }}',
+    '{{ 'header_MG_6979.JPG' | asset_url }}',
+];
+
+createImgElements = () => {
+    for(let i = 0; i < 10; i++){
+        const headSwiper = document.querySelector('#headerSwiper');
+        let randomNum = Math.floor(Math.random()*headerImgArray.length);
+        const nodeA  = document.createElement('a');
+        const nodeImg = document.createElement('img');
+        nodeA.classList.add('swiper-slide');
+        nodeImg.classList.add('img-fluid');
+        nodeImg.setAttribute('src', headerImgArray[randomNum])
+        headSwiper.appendChild(nodeA);
+        nodeA.appendChild(nodeImg);
+    }
+}
+createImgElements();
+
+//Swiper Carousel
+var headerSwiper = new Swiper('.swiper-container', {
+    spaceBetween: 30,
+    effect: 'fade',
+    lazy: true,
+    loop: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+});
+
+  //Insta Shop Carousel
+  var instaSwiper = new Swiper('.swiper-two', {
+    slidesPerView: 4,
+    loop : true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      1024: {
+        slidesPerView: 4,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      412: {
+        slidesPerView: 1,
+      }
+    }
+  });
+
+
+jarallax(document.querySelector('#jarallax'), {
+    speed: 0.2,
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
+});
+jarallax(document.querySelector('#bottomJarallax'), {
+    speed: 0.2,
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
+});
+jarallax(document.querySelectorAll('[data-jarallax-element]'), {
+    disableParallax: function () {
+        return /iPad|iPhone|iPod|Android/.test(navigator.userAgent);
+    },
+})
+// Shop the look button loop
+for (i = 0; i < document.getElementsByClassName('insta-photo').length; i++) {
+    var instaPhoto = document.getElementsByClassName('insta-photo')[i];
+    instaPhoto.id = 'instaPhoto' + i;
+}
+
+})(window);

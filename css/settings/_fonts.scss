@@ -1,45 +1,60 @@
-@include font-face(
-  "Playlist-Script",
-  "../../assets/fonts/Playlist-Script",
-  ("woff", "eot", "ttf", "svg")
-) {
-  font-style: normal;
+@font-face {
+  font-family: 'PlaylistScript';
+  src: url(' {{ "PlaylistScript.eot" | asset_url }} ');
+  src: url(' {{ "PlaylistScript.eot?#iefix" | asset_url }} ') format('embedded-opentype'),
+  url(' {{ "PlaylistScript.woff2" | asset_url }} ') format('woff2'),
+  url(' {{ "PlaylistScript.woff" | asset_url }} ') format('woff'),
+  url(' {{ "PlaylistScript.ttf" | asset_url }} ') format('truetype'),
+  url(' {{ "PlaylistScript.svg#PlaylistScript" | asset_url }} ') format('svg');
   font-weight: normal;
+  font-style: normal;
 }
 
 
-@include font-face(
-  "Raleway-Light",
-  "../../assets/fonts/Raleway-Light",
-  ("woff", "eot", "ttf", "svg")
-) {
-  font-style: normal;
-  font-weight: 300;
+@font-face {
+  font-family: 'RalewayLight';
+  src: url(' {{ "RalewayLight.eot" | asset_url }} ');
+  src: url(' {{ "RalewayLight.eot?#iefix" | asset_url }} ') format('embedded-opentype'),
+  url(' {{ "RalewayLight.woff2" | asset_url }} ') format('woff2'),
+  url(' {{ "RalewayLight.woff" | asset_url }} ') format('woff'),
+  url(' {{ "RalewayLight.ttf" | asset_url }} ') format('truetype'),
+  url(' {{ "RalewayLight.svg#RalewayLight" | asset_url }} ') format('svg');
+  font-weight: normal;
+  font-style: 300;
 }
 
-@include font-face(
-  "Raleway-Regular",
-  "../../assets/fonts/Raleway-Regular",
-  ("woff", "eot", "ttf", "svg")
-) {
-  font-style: normal;
-  font-weight: 400;
+@font-face {
+  font-family: 'RalewayRegular';
+  src: url(' {{ "RalewayRegular.eot" | asset_url }} ');
+  src: url(' {{ "RalewayRegular.eot?#iefix" | asset_url }} ') format('embedded-opentype'),
+  url(' {{ "RalewayRegular.woff2" | asset_url }} ') format('woff2'),
+  url(' {{ "RalewayRegular.woff" | asset_url }} ') format('woff'),
+  url(' {{ "RalewayRegular.ttf" | asset_url }} ') format('truetype'),
+  url(' {{ "RalewayRegular.svg#RalewayRegular" | asset_url }} ') format('svg');
+  font-weight: normal;
+  font-style: 400;
 }
 
-@include font-face(
-  "Raleway-Medium",
-  "../../assets/fonts/Raleway-Medium",
-  ("woff", "eot", "ttf", "svg")
-) {
-  font-style: normal;
-  font-weight: 500;
+@font-face {
+  font-family: 'RalewayMedium';
+  src: url(' {{ "RalewayMedium.eot" | asset_url }} ');
+  src: url(' {{ "RalewayMedium.eot?#iefix" | asset_url }} ') format('embedded-opentype'),
+  url(' {{ "RalewayMedium.woff2" | asset_url }} ') format('woff2'),
+  url(' {{ "RalewayMedium.woff" | asset_url }} ') format('woff'),
+  url(' {{ "RalewayMedium.ttf" | asset_url }} ') format('truetype'),
+  url(' {{ "RalewayMedium.svg#RalewayMedium" | asset_url }} ') format('svg');
+  font-weight: normal;
+  font-style: 500;
 }
 
-@include font-face(
-  "Raleway-Bold",
-  "../../assets/fonts/Raleway-Bold",
-  ("woff", "eot", "ttf", "svg")
-) {
-  font-style: normal;
-  font-weight: 700;
+@font-face {
+  font-family: 'RalewayBold';
+  src: url(' {{ "RalewayBold.eot" | asset_url }} ');
+  src: url(' {{ "RalewayBold.eot?#iefix" | asset_url }} ') format('embedded-opentype'),
+  url(' {{ "RalewayBold.woff2" | asset_url }} ') format('woff2'),
+  url(' {{ "RalewayBold.woff" | asset_url }} ') format('woff'),
+  url(' {{ "RalewayBold.ttf" | asset_url }} ') format('truetype'),
+  url(' {{ "RalewayBold.svg#RalewayBold" | asset_url }} ') format('svg');
+  font-weight: normal;
+  font-style: 700;
 }
